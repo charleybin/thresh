@@ -47,9 +47,9 @@ class ThreshApplication : Application() {
         Thresh.initThreshHandler(reportHandler = object:IReportHandler{
             override fun log(level: Int, tag: String?, message: String?, tr: Throwable?) {
                 if(level == Log.ERROR){
-                    Log.e(tag,message)
+                    Log.e(tag,message!!)
                 }else{
-                    Log.i(tag,message)
+                    Log.i(tag,message!!)
                 }
             }
 
